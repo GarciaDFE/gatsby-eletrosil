@@ -21,3 +21,9 @@
 - atualizar o `gatsby-browser.js` com a(s) fonte(s) do projeto
 - atualizar o `typograph.js` com a(s) fonte(s) do projeto
 - atualizar cores, fontes, gradientes, etc no `projectStyles.js`
+
+## Preparação ambiente versionamento com Git
+- criar ambiente de versionamento local com GIT
+- criar repositório remoto no GitHub
+- comitar implementação inicial do meu Bundle básico Gatsby
+- criar branch DEV para desenvolvimento
