@@ -4,13 +4,13 @@ import styled from "styled-components";
 import Topbar from "./topbar";
 import Brand from "./brand";
 import Navbar from "./navbar";
-import Social from "./social";
+import BtnMobile from "./btnmobile";
 
 const Header = styled.header`
   width: 100%;
   position: relative;
   margin: 0 auto;
-  background-color: violet;
+  background-color: rgb(220, 220, 220);
 `;
 
 const MainNavigation = styled.div`
@@ -20,7 +20,7 @@ const MainNavigation = styled.div`
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5px 20px;
+  padding: 5px 0;
   background-color: rgba(255, 255, 255, 0.5);
 `;
 
@@ -29,8 +29,8 @@ export default () => (
     <Topbar />
     <MainNavigation>
       <Brand />
+      <BtnMobile />
       <Navbar />
-      <Social />
     </MainNavigation>
   </Header>
 );

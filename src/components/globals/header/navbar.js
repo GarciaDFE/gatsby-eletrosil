@@ -6,22 +6,21 @@ import "../../../styles/globalStyles.scss";
 const NavList = styled.nav`
   box-sizing: border-box;
   display: flex;
-  font-size: 20px;
-  background-color: yellow;
-  > .menu {
-    text-align: right;
-  }
+  font-size: 1em;
+  background-color: white;
 `;
 
 const NavItem = styled.li`
-  position: relative;
   display: flex;
-  margin: 0 10px;
-  padding: 0 20px;
-  > .item {
+  margin: 0;
+  background-color: yellow;
+  &:not(:last-child) {
+    margin-right: 60px;
+  }
+  /* > .item {
     &:not(:last-child) {
       /* a partir de 600px */
-      @media all and (min-width: 600px) {
+  /*@media all and (min-width: 600px) {
         border-bottom: 1px solid white;
       }
     }
@@ -35,21 +34,21 @@ const NavItem = styled.li`
       cursor: pointer;
       padding-left: 10px;
       /* até 599px */
-      @media all and (max-width: 599px) {
+  /*@media all and (max-width: 599px) {
         color: orange;
       }
       /* a partir de 600px */
-      @media all and (min-width: 600px) {
+  /*@media all and (min-width: 600px) {
         color: white;
       }
       &:hover {
         /* a partir de 600px */
-        @media all and (min-width: 600px) {
+  /*@media all and (min-width: 600px) {
           color: orange;
         }
       }
     }
-  }
+  } */
 `;
 
 const Action = styled(Link)`
@@ -63,7 +62,7 @@ const Action = styled(Link)`
     /* a partir de 600px */
     @media all and (min-width: 600px) {
       content: "";
-      height: 4px;
+      height: 3px;
       width: 100%;
       background-color: orange;
       position: absolute;
@@ -77,7 +76,7 @@ const Action = styled(Link)`
   &:hover {
     /* a partir de 600px */
     @media all and (min-width: 600px) {
-      color: orange;
+      color: ${props => props.theme.color.secondyDark};
     }
   }
   &:hover:after {
@@ -86,30 +85,34 @@ const Action = styled(Link)`
 `;
 
 const activeAction = {
-  marginBottom: "-5px",
-  borderBottom: "4px solid orange"
+  color: "red" //${props => props.theme.color.secondyDark};
 };
 
 export default () => (
   <NavList>
     <NavItem>
-      <Action to="/" activeStyle={activeAction}>
+      <Action to="./" activeStyle={activeAction}>
         Home
       </Action>
     </NavItem>
     <NavItem>
       <Action to="/page2" activeStyle={activeAction}>
-        Link2
+        Empresa
       </Action>
     </NavItem>
     <NavItem>
       <Action to="/page3" activeStyle={activeAction}>
-        Link3
+        Produtos e Serviços
       </Action>
     </NavItem>
     <NavItem>
       <Action to="/page4" activeStyle={activeAction}>
-        Link4
+        Representantes
+      </Action>
+    </NavItem>
+    <NavItem>
+      <Action to="/page5" activeStyle={activeAction}>
+        Contatos
       </Action>
     </NavItem>
   </NavList>
