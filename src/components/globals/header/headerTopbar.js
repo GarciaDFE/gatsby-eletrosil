@@ -6,7 +6,7 @@ import iconRelogio from "../../../images/header/iconClockNegativo.svg";
 import iconCalendario from "../../../images/header/iconCalenderNegativo.svg";
 import iconLinguas from "../../../images/header/linguas.png";
 
-const Topbar = styled.div`
+const HeaderTopbar = styled.div`
   width: 100%;
   background-color: ${props => props.theme.color.primaryDark};
   color: ${props => props.theme.color.tertiaryLight};
@@ -69,7 +69,7 @@ const Column = styled.div`
 `;
 
 export default ({ data }) => (
-  <Topbar>
+  <HeaderTopbar>
     <Row>
       <Column className="telephone col-sm-12 col-md-12 col-lg-2">
         +55 (11) 2671-7088
@@ -87,5 +87,5 @@ export default ({ data }) => (
         <a href="./">Português Espanhol Inglês</a>
       </Column>
     </Row>
-  </Topbar>
+  </HeaderTopbar>
 );

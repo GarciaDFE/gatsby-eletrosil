@@ -5,7 +5,7 @@ import "typeface-source-sans-pro";
 import "typeface-ubuntu";
 import "../styles/globalStyles.scss";
 import theme from "../styles/projectStyles";
-import Header from "../components/globals/header/mainHeader";
+import Header from "../components/globals/header/Header";
 
 const Layout = ({ children }) => {
   return (
