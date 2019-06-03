@@ -8,7 +8,6 @@ import Social from "./social";
 
 const Header = styled.header`
   width: 100%;
-  height: auto;
   position: relative;
   margin: 0 auto;
   background-color: violet;
