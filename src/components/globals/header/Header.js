@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import HeaderTopbar from "./headerTopbar";
 import NavbarBrand from "./navbarBrand";
 import NavbarLinks from "./navbarLinks";
 
@@ -35,7 +34,6 @@ export default class Navbar extends Component {
   render() {
     return (
       <WrapHeader>
-        <HeaderTopbar />
         <WrapNavbar>
           <NavbarBrand />
           <NavbarLinks navbarOpen={this.state.navbarOpen} />

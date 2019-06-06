@@ -5,13 +5,17 @@ import "typeface-source-sans-pro";
 import "typeface-ubuntu";
 import "../styles/globalStyles.scss";
 import theme from "../styles/projectStyles";
-import Header from "../components/globals/header/Header";
+import TopBar from "../components/globals/TopBar";
+import NavBar from "../components/globals/NavBar";
+import Carousel from "../components/Carousel";
 
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Header />
+        <TopBar />
+        <NavBar />
+        <Carousel />
         {children}
       </>
     </ThemeProvider>

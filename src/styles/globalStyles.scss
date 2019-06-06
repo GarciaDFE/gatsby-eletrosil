@@ -1,3 +1,13 @@
-@import "bootstrap-grid.min.css";
+@import url("../../node_modules/bootstrap/scss/bootstrap.scss");
 @import "reset.scss";
-@import "myreset.scss";
+//
+// Configurações específicas de RESET deste projeto
+//
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
