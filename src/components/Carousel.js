@@ -27,22 +27,28 @@ const Text = styled.p`
 `;
 
 const MyCCpation = styled(Carousel.Caption)`
-  background-color: violet;
-  text-align: left;
-  margin: 0;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Img = styled.img`
+  margin: 0 auto;
 `;
 
 export default ({ data }) => (
   <Carousel>
     <Carousel.Item>
-      <img className="d-block w-100" src={img1} alt="First slide" />
-      {/* <Carousel.Caption> */}
+      <Img className="d-block w-100" src={img1} alt="First slide" />
       <MyCCpation>
         <Title>Bem-vindo à Eletrosil!</Title>
         <SubTitle>Mais de 50 anos de tradição em qualidade</SubTitle>
-        <Text>
+        <Text className="d-none d-md-block">
           Soluções em equipamentos eletromecânicos e painéis elétricos de baixa
           tensão e especializada no fornecimento de soluções sob encomenda para
           empresas e consultores dos setores de siderurgia, mineração, papel e
@@ -51,13 +57,13 @@ export default ({ data }) => (
       </MyCCpation>
     </Carousel.Item>
     <Carousel.Item>
-      <img className="d-block w-100" src={img2} alt="Third slide" />
+      <Img className="d-block w-100" src={img2} alt="Third slide" />
       <MyCCpation>
         <Title>Lançamento da Nova Chave Elétrica</Title>
         <SubTitle>
           A mais moderna do mercado e com o dobro da durabilidade
         </SubTitle>
-        <Text>
+        <Text className="d-none d-md-block">
           Chave de emergência ideal para trabalhar em transportadores de correia
           de alta densidade em ambientes com grande concentração de pós e também
           em atmosfera marinha ou corrosiva.
@@ -65,12 +71,12 @@ export default ({ data }) => (
       </MyCCpation>
     </Carousel.Item>
     <Carousel.Item>
-      <img className="d-block w-100" src={img3} alt="Third slide" />
+      <Img className="d-block w-100" src={img3} alt="Third slide" />
       <MyCCpation>
         <Title>
           Soluções Completas de Automação e Controle de Pontes Rolantes
         </Title>
-        <Text>
+        <Text className="d-none d-md-block">
           Em parceria com empresas multinacionais de tecnologias consagradas
           fornecemos soluções completas em sistemas de automação e controle de
           movimentação de cargas.
