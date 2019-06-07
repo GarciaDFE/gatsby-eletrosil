@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "gatsby";
 import logoNav from "../../images/header/logo.jpg";
+import NavLink from "react-bootstrap/NavLink";
 
 const NBContainer = styled(Container)`
-  background-color: red; //${props => props.theme.color.tertiaryMedium};
+  background-color: ${props => props.theme.color.tertiaryLight};
   color: ${props => props.theme.color.primaryDark};
   padding: 0;
 `;
@@ -19,6 +20,9 @@ const NBNavbar = styled(Navbar)`
   width: 100%;
   background-color: ${props => props.theme.color.tertiaryLight};
   padding: 0 5px;
+  .navbar-toggler {
+    border: none;
+  }
 `;
 
 const NBLogo = styled(Link)`
@@ -26,6 +30,37 @@ const NBLogo = styled(Link)`
     margin: 0;
     padding: 0;
     width: 165px;
+  }
+`;
+
+const NBLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  color: ${props => props.theme.color.tertiaryMedium};
+  margin: 10px 20px;
+  &:hover {
+    text-decoration: none;
+    color: ${props => props.theme.color.secondyDark};
+  }
+`;
+
+const NBDrop = styled(NavDropdown)`
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+  &.nav-item > .nav-link {
+    color: ${props => props.theme.color.tertiaryMedium};
+    &:hover {
+      color: ${props => props.theme.color.secondyDark};
+    }
+  }
+  > .dropdown-menu > .dropdown-item {
+    font-size: 0.8em;
+    color: ${props => props.theme.color.tertiaryMedium};
+    &:hover {
+      background-color: transparent;
+      color: ${props => props.theme.color.secondyDark};
+    }
   }
 `;
 
@@ -40,9 +75,9 @@ export default ({ data }) => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="#home">Início</Nav.Link>
-          <Nav.Link href="#empresa">Empresa</Nav.Link>
-          <NavDropdown title="Produtos e Serviços" id="basic-nav-dropdown">
+          <NBLink href="index.js">Início</NBLink>
+          <NBLink href="#empresa">Empresa</NBLink>
+          <NBDrop title="Produtos e Serviços" id="basic-nav-dropdown">
             <NavDropdown.Item href="#produtos">
               Nossos Produtos
             </NavDropdown.Item>
@@ -50,9 +85,9 @@ export default ({ data }) => (
             <NavDropdown.Item href="#servicos">
               Nossos Serviços
             </NavDropdown.Item>
-          </NavDropdown>
-          <Nav.Link href="#representantes">Representantes</Nav.Link>
-          <Nav.Link href="#contatos">Contatos</Nav.Link>
+          </NBDrop>
+          <NBLink href="#representantes">Representantes</NBLink>
+          <NBLink href="#contatos">Contatos</NBLink>
         </Nav>
       </Navbar.Collapse>
     </NBNavbar>
