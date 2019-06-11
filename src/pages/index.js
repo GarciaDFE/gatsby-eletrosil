@@ -1,32 +1,45 @@
 import React from "react";
 import styled from "styled-components";
+import { Container } from "react-bootstrap";
 
 import Layout from "../components/Layout";
 import Carousel from "../components/Carousel";
 import TitleSection from "../components/TitleSection";
 import HomeCompany from "../components/HomeCompany";
+import HomeProdServ from "../components/CardProdServ";
 
-const CarouselSection = styled.section`
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
+const CompanyContainer = styled(Container)`
+  padding: 30px 0;
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
 `;
 
-const CompanySection = styled.section`
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+const ProdServContainer = styled(Container)`
+  padding: 30px 0;
+  background-color: yellow;
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
 `;
 
 const IndexPage = () => (
   <Layout>
-    <CarouselSection>
+    <Container fluid>
       <Carousel />
-    </CarouselSection>
-    <CompanySection>
+    </Container>
+    <CompanyContainer fluid>
       <TitleSection subtitle={"Um Pouco"} title={"Sobre Nossa Empresa"} />
       <HomeCompany />
-    </CompanySection>
+    </CompanyContainer>
+    <ProdServContainer fluid>
+      <TitleSection
+        className="-inverse"
+        subtitle={"Nossa Linha de"}
+        title={"Produtos e Serviços"}
+      />
+      <HomeProdServ />
+    </ProdServContainer>
   </Layout>
 );
 

@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 
 const BtnSaibaMais = styled(Link)`
   display: inline-block;
+  margin: 0 auto;
   background-color: ${props => props.theme.color.secondyDark};
   color: ${props => props.theme.color.tertiaryLight};
   width: 100px;
@@ -26,6 +27,9 @@ const BtnSaibaMais = styled(Link)`
     transition: all 300ms linear;
     text-decoration: inherit;
     color: ${props => props.theme.color.tertiaryLight};
+  }
+  @media (min-width: 768px) {
+    margin: 0 auto 0 0;
   }
 `;
 

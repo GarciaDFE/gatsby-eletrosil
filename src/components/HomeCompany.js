@@ -11,14 +11,17 @@ const HomeCompany = styled(Row)`
 `;
 
 const Img = styled(Col)`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  img {
-    width: 100%;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin: 0;
+    padding: 0;
+    img {
+      width: 100%;
+      margin: 0;
+    }
   }
 `;
 
@@ -27,17 +30,19 @@ const History = styled(Col)`
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0;
-  padding: 0;
 `;
 
 const Paragraph = styled.p`
-  width: 90%;
   font-family: ${props => props.theme.font.primary};
   color: ${props => props.theme.color.tertiaryMedium};
   font-size: 0.8em;
-  line-height: 1.5em;
   margin-bottom: 1em;
+  @media (min-width: 768px) {
+    width: 90%;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
 `;
 
 export default () => (

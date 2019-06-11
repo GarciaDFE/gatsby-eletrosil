@@ -11,13 +11,15 @@ const Title = styled.h3`
   font-size: 1.5em;
   margin-bottom: 0.2em;
 `;
+
 const SubTitle = styled.h5`
-  color: ${props => props.theme.color.tertiaryLight};
+  color: ${props => props.theme.color.secondyMedium};
   font-family: ${props => props.theme.font.secondy};
   text-transform: uppercase;
   font-size: 1em;
   margin-bottom: 0.4em;
 `;
+
 const Text = styled.p`
   color: ${props => props.theme.color.tertiaryLight};
   font-family: ${props => props.theme.font.secondy};
@@ -42,9 +44,9 @@ const Img = styled.img`
 `;
 
 export default ({ data }) => (
-  <Carousel>
+  <Carousel interval={3000}>
     <Carousel.Item>
-      <Img className="d-block w-100" src={img1} alt="First slide" />
+      <Img className="d-block" src={img1} alt="First slide" />
       <MyCCpation>
         <Title>Bem-vindo à Eletrosil!</Title>
         <SubTitle>Mais de 50 anos de tradição em qualidade</SubTitle>
@@ -57,7 +59,7 @@ export default ({ data }) => (
       </MyCCpation>
     </Carousel.Item>
     <Carousel.Item>
-      <Img className="d-block w-100" src={img2} alt="Third slide" />
+      <Img className="d-block" src={img2} alt="Third slide" />
       <MyCCpation>
         <Title>Lançamento da Nova Chave Elétrica</Title>
         <SubTitle>
@@ -71,7 +73,7 @@ export default ({ data }) => (
       </MyCCpation>
     </Carousel.Item>
     <Carousel.Item>
-      <Img className="d-block w-100" src={img3} alt="Third slide" />
+      <Img className="d-block" src={img3} alt="Third slide" />
       <MyCCpation>
         <Title>
           Soluções Completas de Automação e Controle de Pontes Rolantes
