@@ -3,49 +3,53 @@ import styled from "styled-components";
 import { Col } from "react-bootstrap";
 import BtnSaibaMais from "./BtnSaibaMais";
 
+const CardCol = styled(Col)`
+  margin: 0;
+  padding: 0;
+`;
+
 const Card = styled.dl`
-  position: relative;
-  display: inline-block;
   box-sizing: border-box;
-  margin: 10px auto;
-  width: 100%;
-  /* background-image: var(--color-bgDarkGradient); */
-  background-color: gray;
-  border: 1px solid white;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
-  padding: 30px 0;
+  width: 90%;
+  background-image: ${props => props.theme.gradient.primary};
+  border: 1px solid ${props => props.theme.color.primaryDark};
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
+  margin: 10px auto;
+  padding: 20px 15px;
+  @media (min-width: 768px) {
+    width: 200px;
+  }
 `;
 
 const Icon = styled.dd`
   width: 100%;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  img {
+    margin: 0;
+  }
 `;
 
 const Title = styled.dt`
-  width: 85%;
-  margin: 10px auto;
-  font-family: ${props => props.theme.font.secondy};
-  letter-spacing: 0.05em;
+  font-family: ${props => props.theme.font.primary};
   color: ${props => props.theme.color.tertiaryLight};
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 700;
   line-height: 1.2em;
   text-transform: uppercase;
+  margin: 0 0 10px 0;
 `;
 
 const Description = styled.dd`
-  width: 85%;
-  margin: 10px auto;
   font-family: ${props => props.theme.font.secondy};
-  letter-spacing: 0.05em;
   color: ${props => props.theme.color.tertiaryLight};
-  font-size: 0.8em;
-  line-height: 1.5em;
+  font-size: 0.75em;
+  line-height: 1.2em;
+  margin: 0 0 20px 0;
 `;
 
 export default ({ icon, title, description, altText }) => (
-  <Col col sm={6} md={4} lg={2}>
+  <CardCol sm={6} md={4} lg={2}>
     <Card>
       <Icon>
         <img src={icon} alt={altText} />
@@ -54,5 +58,5 @@ export default ({ icon, title, description, altText }) => (
       <Description>{description}</Description>
       <BtnSaibaMais />
     </Card>
-  </Col>
+  </CardCol>
 );

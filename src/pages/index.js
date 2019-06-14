@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import Carousel from "../components/Carousel";
 import TitleSection from "../components/TitleSection";
 import HomeCompany from "../components/HomeCompany";
-import HomeProdServ from "../components/CardProdServ";
+import HomeProdServ from "../components/HomeProdServ";
 
 const CompanyContainer = styled(Container)`
   padding: 30px 0;
@@ -17,7 +17,7 @@ const CompanyContainer = styled(Container)`
 
 const ProdServContainer = styled(Container)`
   padding: 30px 0;
-  background-color: blue;
+  background-color: ${props => props.theme.color.primaryDark};
   @media (min-width: 768px) {
     padding: 50px 0;
   }
