@@ -17,7 +17,7 @@ const CompanyContainer = styled(Container)`
 
 const ProdServContainer = styled(Container)`
   padding: 30px 0;
-  background-color: yellow;
+  background-color: blue;
   @media (min-width: 768px) {
     padding: 50px 0;
   }
@@ -34,7 +34,7 @@ const IndexPage = () => (
     </CompanyContainer>
     <ProdServContainer fluid>
       <TitleSection
-        className="-inverse"
+        inverseClass={"-inverse"}
         subtitle={"Nossa Linha de"}
         title={"Produtos e Serviços"}
       />

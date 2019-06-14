@@ -19,10 +19,6 @@ const Title = styled.h1`
   @media (min-width: 576px) {
     font-size: 1.8em;
   }
-  &.-inverse {
-    color: ${props => props.theme.color.tertiaryLight};
-    letter-spacing: 0.05em;
-  }
   &::after {
     content: "";
     display: block;
@@ -30,8 +26,16 @@ const Title = styled.h1`
     height: 4px;
     background: ${props => props.theme.color.secondyDark};
     margin: 10px auto;
-    &.-inverse {
+  }
+  &.-inverse {
+    color: ${props => props.theme.color.tertiaryLight};
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 4px;
       background: ${props => props.theme.color.tertiaryLight};
+      margin: 10px auto;
     }
   }
 `;
@@ -53,9 +57,9 @@ const Subtitle = styled.h4`
   }
 `;
 
-export default ({ title, subtitle }) => (
+export default ({ title, subtitle, inverseClass }) => (
   <WrapTitleSection>
-    <Subtitle>{subtitle}</Subtitle>
-    <Title>{title}</Title>
+    <Subtitle className={inverseClass}>{subtitle}</Subtitle>
+    <Title className={inverseClass}>{title}</Title>
   </WrapTitleSection>
 );
