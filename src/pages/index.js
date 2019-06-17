@@ -7,6 +7,7 @@ import Carousel from "../components/Carousel";
 import TitleSection from "../components/TitleSection";
 import HomeCompany from "../components/HomeCompany";
 import HomeProdServ from "../components/HomeProdServ";
+import HomeContact from "../components/HomeContact";
 
 const CompanyContainer = styled(Container)`
   padding: 30px 0;
@@ -18,6 +19,13 @@ const CompanyContainer = styled(Container)`
 const ProdServContainer = styled(Container)`
   padding: 30px 0;
   background-color: ${props => props.theme.color.primaryDark};
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
+`;
+
+const ContactContainer = styled(Container)`
+  padding: 30px 0;
   @media (min-width: 768px) {
     padding: 50px 0;
   }
@@ -40,6 +48,10 @@ const IndexPage = () => (
       />
       <HomeProdServ />
     </ProdServContainer>
+    <ContactContainer fluid>
+      <TitleSection subtitle={"Como você pode"} title={"Falar Conosco"} />
+      <HomeContact />
+    </ContactContainer>
   </Layout>
 );
 

@@ -22,15 +22,16 @@ const BtnSaibaMais = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   transition: all 300ms linear;
+  opacity: 0.9;
   &:hover {
-    background-color: ${props => props.theme.color.primaryDark};
     transition: all 300ms linear;
     text-decoration: inherit;
     color: ${props => props.theme.color.tertiaryLight};
+    opacity: 1;
   }
   @media (min-width: 768px) {
     margin: 0 auto 0 0;
   }
 `;
 
-export default () => <BtnSaibaMais>Saiba Mais</BtnSaibaMais>;
+export default props => <BtnSaibaMais>Saiba Mais</BtnSaibaMais>;
