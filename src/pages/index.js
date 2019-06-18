@@ -25,7 +25,7 @@ const ProdServContainer = styled(Container)`
 `;
 
 const ContactContainer = styled(Container)`
-  padding: 30px 0;
+  padding: 30px 0 0 0;
   @media (min-width: 768px) {
     padding: 50px 0;
   }

@@ -8,17 +8,16 @@ import iconEmail from "../images/iconEnvelopePositivo.svg";
 import iconWhats from "../images/iconWhatsappPositivo.svg";
 
 const HomeContact = styled(Row)`
-  margin: 0;
-  padding: 0;
   width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
-  max-width: 1200px;
-  @media (min-width: 992px) {
+  padding: 0;
+  @media (min-width: 768px) {
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-around;
   }
 `;
 
@@ -28,8 +27,11 @@ const Img = styled(Col)`
   margin: 0;
   padding: 0;
   text-align: center;
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     text-align: right;
+  }
+  img {
+    margin: 0;
   }
 `;
 
@@ -40,9 +42,8 @@ const Contacts = styled(Col)`
   font-family: ${props => props.theme.font.second};
   color: ${props => props.theme.color.tertiaryMedium};
   margin-bottom: 20px;
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     align-items: flex-start;
-    margin: 20px;
   }
 `;
 
@@ -57,7 +58,7 @@ const ListContacts = styled.ul`
   & li {
     margin: 0;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     text-align: left;
   }
 `;
@@ -69,14 +70,11 @@ const Name = styled.li`
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 5px;
-  @media (min-width: 992px) {
-    padding-left: -20px;
-  }
 `;
 
 const Local = styled.li`
   margin: 0;
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     padding-left: 25px;
   }
   &:before {
@@ -85,7 +83,7 @@ const Local = styled.li`
     background-repeat: no-repeat;
     font-size: 0.8em;
     padding-left: 25px;
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       margin-left: -25px;
     }
   }
@@ -105,9 +103,7 @@ const Phone = styled.li`
 
 const ItemSetor = styled.li`
   font-size: 1em;
-  @media (min-width: 992px) {
-    padding-left: 25px;
-  }
+  padding-left: 25px;
 `;
 const ItemEmail = styled.li`
   &:before {
