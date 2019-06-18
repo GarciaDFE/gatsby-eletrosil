@@ -8,24 +8,36 @@ import img3 from "../images/carousel/img3Carousel.jpg";
 const Title = styled.h3`
   color: ${props => props.theme.color.tertiaryLight};
   font-family: ${props => props.theme.font.primary};
-  font-size: 1.5em;
-  margin-bottom: 0.2em;
+  font-size: 1.3rem;
+  margin-bottom: 0.1rem;
+  @media (min-width: 768px) {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+  }
 `;
 
 const SubTitle = styled.h5`
   color: ${props => props.theme.color.secondyMedium};
   font-family: ${props => props.theme.font.secondy};
   text-transform: uppercase;
-  font-size: 1em;
-  margin-bottom: 0.4em;
+  font-size: 0.9em;
+  margin-bottom: 0.2em;
+  @media (min-width: 768px) {
+    font-size: 1em;
+    margin-bottom: 0.4em;
+  }
 `;
 
 const Text = styled.p`
   color: ${props => props.theme.color.tertiaryLight};
   font-family: ${props => props.theme.font.secondy};
-  font-size: 0.9em;
-  line-height: 1.2em;
-  width: 70%;
+  width: 100%;
+  font-size: 0.8em;
+  line-height: 1.1em;
+  @media (min-width: 768px) {
+    font-size: 0.9em;
+    line-height: 1.2em;
+  }
 `;
 
 const MyCCpation = styled(Carousel.Caption)`
@@ -41,16 +53,31 @@ const MyCCpation = styled(Carousel.Caption)`
 
 const Img = styled.img`
   margin: 0 auto;
+  min-height: 250px;
+  max-height: 350px;
+`;
+
+const HomeCarousel = styled(Carousel)`
+  .carousel-indicators {
+    margin-bottom: 0;
+    height: 2em;
+    li {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: orange;
+    }
+  }
 `;
 
 export default ({ data }) => (
-  <Carousel interval={3000}>
+  <HomeCarousel fluid interval={5000}>
     <Carousel.Item>
       <Img className="d-block" src={img1} alt="First slide" />
       <MyCCpation>
         <Title>Bem-vindo à Eletrosil!</Title>
         <SubTitle>Mais de 50 anos de tradição em qualidade</SubTitle>
-        <Text className="d-none d-md-block">
+        <Text>
           Soluções em equipamentos eletromecânicos e painéis elétricos de baixa
           tensão e especializada no fornecimento de soluções sob encomenda para
           empresas e consultores dos setores de siderurgia, mineração, papel e
@@ -65,7 +92,7 @@ export default ({ data }) => (
         <SubTitle>
           A mais moderna do mercado e com o dobro da durabilidade
         </SubTitle>
-        <Text className="d-none d-md-block">
+        <Text>
           Chave de emergência ideal para trabalhar em transportadores de correia
           de alta densidade em ambientes com grande concentração de pós e também
           em atmosfera marinha ou corrosiva.
@@ -78,12 +105,12 @@ export default ({ data }) => (
         <Title>
           Soluções Completas de Automação e Controle de Pontes Rolantes
         </Title>
-        <Text className="d-none d-md-block">
+        <Text>
           Em parceria com empresas multinacionais de tecnologias consagradas
           fornecemos soluções completas em sistemas de automação e controle de
           movimentação de cargas.
         </Text>
       </MyCCpation>
     </Carousel.Item>
-  </Carousel>
+  </HomeCarousel>
 );

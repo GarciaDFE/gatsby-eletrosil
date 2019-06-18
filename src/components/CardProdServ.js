@@ -49,15 +49,25 @@ const Description = styled.dd`
   margin: 0 0 20px 0;
 `;
 
-const BtnCard = styled(BtnSaibaMais)`
-  background-color: black;
-  color: yellow;
-`;
-
-// const BtnCard2 = BtnSaibaMais.extend`
+// const BtnCard = styled(BtnSaibaMais)`
 //   background-color: black;
 //   color: yellow;
 // `;
+
+// const BtnCard = styled(BtnSaibaMais)`
+//   background-color: ${props => props.theme.color.secondyDark};
+//   color: ${props => props.theme.color.tertiaryLight};
+// `;
+
+// BtnCard.defaultProps = {
+//   backgroundColor: "black",
+//   color: "yellow"
+// };
+
+const BtnCard = BtnSaibaMais.extend`
+  background-color: ${props => props.theme.color.tertiaryLight};
+  color: ${props => props.theme.color.secondyDark};
+`;
 
 export default ({ icon, title, description, altText }) => (
   <CardCol sm={6} md={4} lg={2}>

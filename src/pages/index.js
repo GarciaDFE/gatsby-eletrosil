@@ -3,11 +3,15 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
 import Layout from "../components/Layout";
-import Carousel from "../components/Carousel";
+import HomeCarousel from "../components/HomeCarousel";
 import TitleSection from "../components/TitleSection";
 import HomeCompany from "../components/HomeCompany";
 import HomeProdServ from "../components/HomeProdServ";
 import HomeContact from "../components/HomeContact";
+
+const CarouselContainer = styled(Container)`
+  padding: 0;
+`;
 
 const CompanyContainer = styled(Container)`
   padding: 30px 0;
@@ -33,9 +37,9 @@ const ContactContainer = styled(Container)`
 
 const IndexPage = () => (
   <Layout>
-    <Container fluid>
-      <Carousel />
-    </Container>
+    <CarouselContainer fluid>
+      <HomeCarousel />
+    </CarouselContainer>
     <CompanyContainer fluid>
       <TitleSection subtitle={"Um Pouco"} title={"Sobre Nossa Empresa"} />
       <HomeCompany />
