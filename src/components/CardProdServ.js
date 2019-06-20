@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Col } from "react-bootstrap";
 import BtnSaibaMais from "./BtnSaibaMais";
 
+
 const CardCol = styled(Col)`
   margin: 0;
   padding: 0;
@@ -49,24 +50,13 @@ const Description = styled.dd`
   margin: 0 0 20px 0;
 `;
 
-// const BtnCard = styled(BtnSaibaMais)`
-//   background-color: black;
-//   color: yellow;
-// `;
-
-// const BtnCard = styled(BtnSaibaMais)`
-//   background-color: ${props => props.theme.color.secondyDark};
-//   color: ${props => props.theme.color.tertiaryLight};
-// `;
-
-// BtnCard.defaultProps = {
-//   backgroundColor: "black",
-//   color: "yellow"
-// };
-
-const BtnCard = BtnSaibaMais.extend`
-  background-color: ${props => props.theme.color.tertiaryLight};
-  color: ${props => props.theme.color.secondyDark};
+const BtnCard = styled(BtnSaibaMais)`
+  @media (min-width: 768px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+  }
 `;
 
 export default ({ icon, title, description, altText }) => (

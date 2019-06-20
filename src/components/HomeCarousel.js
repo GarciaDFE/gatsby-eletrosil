@@ -52,9 +52,13 @@ const MyCCpation = styled(Carousel.Caption)`
 `;
 
 const Img = styled.img`
+position: relative;
+min-width: 100%;
+
   margin: 0 auto;
   min-height: 250px;
   max-height: 350px;
+
 `;
 
 const HomeCarousel = styled(Carousel)`
@@ -71,7 +75,7 @@ const HomeCarousel = styled(Carousel)`
 `;
 
 export default ({ data }) => (
-  <HomeCarousel fluid interval={5000}>
+  <HomeCarousel interval={5000}>
     <Carousel.Item>
       <Img className="d-block" src={img1} alt="First slide" />
       <MyCCpation>
@@ -86,7 +90,7 @@ export default ({ data }) => (
       </MyCCpation>
     </Carousel.Item>
     <Carousel.Item>
-      <Img className="d-block" src={img2} alt="Third slide" />
+      <Img className="d-block img-fluid" src={img2} alt="Third slide" />
       <MyCCpation>
         <Title>Lançamento da Nova Chave Elétrica</Title>
         <SubTitle>
@@ -100,7 +104,7 @@ export default ({ data }) => (
       </MyCCpation>
     </Carousel.Item>
     <Carousel.Item>
-      <Img className="d-block" src={img3} alt="Third slide" />
+      <Img className="d-block img-fluid" src={img3} alt="Third slide" />
       <MyCCpation>
         <Title>
           Soluções Completas de Automação e Controle de Pontes Rolantes

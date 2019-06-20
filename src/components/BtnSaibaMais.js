@@ -34,4 +34,4 @@ const BtnSaibaMais = styled(Link)`
   }
 `;
 
-export default props => <BtnSaibaMais>Saiba Mais</BtnSaibaMais>;
+export default props => <BtnSaibaMais {...props}>Saiba Mais</BtnSaibaMais>;
