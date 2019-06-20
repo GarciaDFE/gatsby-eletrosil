@@ -22,7 +22,7 @@ const TBRow = styled(Row)`
 
 const TBCol = styled(Col)`
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   &.telephone::before {
     content: "";
     background: url(${iconTelefone});

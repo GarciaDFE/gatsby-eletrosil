@@ -17,7 +17,7 @@ const theme = {
      sans-serif,
      -apple-system,
      BlinkMacSystemFont`,
-    second: `
+    secondy: `
      "Source Sans Pro",
      Roboto,
      Helvetica,
@@ -27,7 +27,8 @@ const theme = {
      BlinkMacSystemFont`
   },
   gradient: {
-    primary: `linear-gradient(to bottom, rgba(0, 70, 124, 0.8), rgba(0, 70, 124, 0))`
+    primary: `linear-gradient(to bottom, rgba(0, 70, 124, 0.8), rgba(0, 70, 124, 0))`,
+    secondy: `linear-gradient(45deg, rgba(0, 70, 124, 0.8), rgba(0, 0, 0, 0.5))`
   }
 };
 
