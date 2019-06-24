@@ -14,25 +14,9 @@ const CarouselOverlay = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  background: ${props => props.theme.gradient.secondy};
+  /* background: ${props => props.theme.gradient.secondy}; */
+  background-color: transparent;
 `
-
-// const Content = styled.div`
-//   width: 80%;
-//   height: 80%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   transform: translateY(50%);
-//   &.slide2 {
-//     align-items: flex-start;
-//   }
-//   &.-active {
-//     transform: translateY(0);
-//     transition: translate 300ms linear;
-//   }
-// `
 
 const Title = styled.h2`
   color: ${props => props.theme.color.tertiaryLight};
@@ -41,12 +25,12 @@ const Title = styled.h2`
   font-weight: normal;
   margin-bottom: 0.1rem;
   text-align: center;
-  @media (min-width: 576px) {
-    width: 70%;
-  }
   @media (min-width: 768px) {
     font-size: 1.5em;
     margin-bottom: 0.2em;
+    &.slide2 {
+      text-align: left;
+    }
   }
   @media (min-width: 992px) {
     font-size: 2em;
@@ -54,13 +38,9 @@ const Title = styled.h2`
   &-destaque {
     font-weight: bold;    
   }
-  &.slide2 {
-    text-align: left;
-  }
 `;
 
 const SubTitle = styled.h3`
-  width: 90%;
   color: ${props => props.theme.color.secondyMedium};
   font-family: ${props => props.theme.font.secondy};
   text-transform: uppercase;
@@ -68,12 +48,13 @@ const SubTitle = styled.h3`
   font-weight: normal;
   margin-bottom: 0.2em;
   text-align: center;
-  @media (min-width: 576px) {
-    width: 70%;
-  }
   @media (min-width: 768px) {
     font-size: 1em;
     margin-bottom: 0.4em;
+    &.slide2 {
+      text-align: left;
+      width: 60%;
+    }
   }
   @media (min-width: 992px) {
     font-size: 1.1em;
@@ -81,13 +62,9 @@ const SubTitle = styled.h3`
   &-destaque {
     font-weight: bold;    
   }
-  &.slide2 {
-    text-align: left;
-  }
 `;
 
 const Text = styled.p`
-  width: 70%;
   color: ${props => props.theme.color.tertiaryLight};
   font-family: ${props => props.theme.font.secondy};
   font-size: 0.8em;
@@ -97,27 +74,22 @@ const Text = styled.p`
   @media (min-width: 768px) {
     font-size: 0.9em;
     line-height: 1.2em;
+    &.slide2 {
+      width: 60%;
+      text-align: left;
+    }
   }
   @media (min-width: 992px) {
     font-size: 1em;
     line-height: 1.3em;
   }
-  &.slide2 {
-    width: 50%;
-    text-align: left;
-  }
-`;
-
-const Img = styled.img`
-  min-height: 300px;
-  max-height: 724px;
-  margin: 0 auto;
 `;
 
 const Btn = styled(BtnSaibaMais)`
-  margin: 0 auto;
-  &.slide2 {
-    margin: 0;
+  @media (min-width: 768px) {
+    &.slide2 {
+      float: left;
+    }
   }
 `
 
@@ -132,7 +104,7 @@ const HomeCarousel = styled(Carousel)`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: orange;
+      background-color: ${props => props.theme.color.secondyDark};
       @media (min-width: 576px) {
         width: 12px;
         height: 12px;
@@ -142,7 +114,7 @@ const HomeCarousel = styled(Carousel)`
   }
   .carousel-control-prev,
   .carousel-control-next {
-    width: 5%;
+    width: 10%;
     @media (max-width: 576px) {
       display: none;
     }
@@ -151,53 +123,60 @@ const HomeCarousel = styled(Carousel)`
     top: 50%;
     bottom: auto;
     transform: translateY(-50%);
+    left: 15%;
+    right: 15%;
   }
-    .carousel-item {
+  .carousel-item {
     height: 100%;
     min-height: 300px;
-    background-image: url(${img2});
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    &.slide1 {
+      background-image: url(${img1});
+    }
+    &.slide2 {
+      background-image: url(${img2});
+    }
+    &.slide3 {
+      background-image: url(${img3});
+    }
   }
 `;
 
 export default ({ data }) => (
-  <HomeCarousel interval={3000}>
-    <Carousel.Item>
+  <HomeCarousel interval={6000}>
+    <Carousel.Item className="slide1">
       <CarouselOverlay />
-      <Img className="d-block" src={img1} alt="First slide" />
       <Carousel.Caption>
         <Title>Bem-vindo à <strong className="-destaque">Eletrosil!</strong></Title>
         <SubTitle>Mais de <strong className="-destaque">50 anos</strong> de tradição em qualidade</SubTitle>
-        <Text className="d-none d-sm-block">
+        <Text className="d-block">
           Soluções em equipamentos eletromecânicos e painéis elétricos de baixa tensão e especializada no fornecimento de soluções sob encomenda para empresas e consultores dos setores de siderurgia, mineração, papel e celulose, ferrovias e engenharia.
         </Text>
         <Btn />
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="slide2">
       <CarouselOverlay />
-      {/* <Img className="d-block" src={img2} alt="Third slide" /> */}
       <Carousel.Caption>
         <Title className="slide2">Lançamento da Nova Chave Elétrica</Title>
         <SubTitle className="slide2">
           A mais moderna do mercado e com o dobro da durabilidade
         </SubTitle>
-        <Text className="d-none d-sm-block slide2">
+        <Text className="d-block slide2">
           Chave de emergência ideal para trabalhar em transportadores de correia de alta densidade em ambientes com grande concentração de pós e também em atmosfera marinha ou corrosiva.
         </Text>
         <Btn className="slide2"/>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="slide3">
       <CarouselOverlay />
-      <Img className="d-block" src={img3} alt="Third slide" />
       <Carousel.Caption>
         <Title>
           Soluções Completas de Automação e Controle de Pontes Rolantes
         </Title>
-        <Text className="d-none d-sm-block">
+        <Text className="d-block">
           Em parceria com empresas multinacionais de tecnologias consagradas
           fornecemos soluções completas em sistemas de automação e controle de movimentação de cargas.
         </Text>
