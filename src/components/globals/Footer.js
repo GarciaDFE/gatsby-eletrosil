@@ -13,8 +13,8 @@ const FTRow = styled(Row)`
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 0;
-  font-family: ${props => props.theme.font.primary};
-  font-size: 0.8em;
+  font-family: ${props => props.theme.font.secondy};
+  font-size: 1em;
   font-weight: normal;
   color: ${props => props.theme.color.tertiaryLight};
   text-align: center;

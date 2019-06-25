@@ -14,7 +14,8 @@ const TBContainer = styled(Container)`
 `;
 
 const TBRow = styled(Row)`
-  font-size: 0.7em;
+  font-family: ${props => props.theme.font.secondy};
+  font-size: 0.8em;
   font-weight: bold;
   max-width: 1200px;
   margin: 0 auto;

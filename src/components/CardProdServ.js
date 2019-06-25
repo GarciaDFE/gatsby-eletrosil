@@ -43,9 +43,9 @@ const Title = styled.dt`
 `;
 
 const Description = styled.dd`
-  font-family: ${props => props.theme.font.second};
+  font-family: ${props => props.theme.font.secondy};
   color: ${props => props.theme.color.tertiaryLight};
-  font-size: 0.75em;
+  font-size: 0.8em;
   line-height: 1.2em;
   margin: 0 0 20px 0;
 `;

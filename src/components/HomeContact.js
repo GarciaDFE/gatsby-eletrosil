@@ -39,7 +39,7 @@ const Contacts = styled(Col)`
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: ${props => props.theme.font.second};
+  font-family: ${props => props.theme.font.secondy};
   color: ${props => props.theme.color.tertiaryMedium};
   margin-bottom: 20px;
   @media (min-width: 768px) {
@@ -74,6 +74,7 @@ const Name = styled.li`
 
 const Local = styled.li`
   margin: 0;
+  line-height: 1.2em;
   @media (min-width: 768px) {
     padding-left: 25px;
   }

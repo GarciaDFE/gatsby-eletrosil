@@ -14,8 +14,7 @@ const CarouselOverlay = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  /* background: ${props => props.theme.gradient.secondy}; */
-  background-color: transparent;
+  background: ${props => props.theme.gradient.secondy};
 `
 
 const Title = styled.h2`
@@ -119,6 +118,7 @@ const HomeCarousel = styled(Carousel)`
       display: none;
     }
   }
+
   .carousel-caption {
     top: 50%;
     bottom: auto;
@@ -126,6 +126,7 @@ const HomeCarousel = styled(Carousel)`
     left: 15%;
     right: 15%;
   }
+
   .carousel-item {
     height: 100%;
     min-height: 300px;
@@ -144,19 +145,22 @@ const HomeCarousel = styled(Carousel)`
   }
 `;
 
+
 export default ({ data }) => (
   <HomeCarousel interval={6000}>
+
     <Carousel.Item className="slide1">
       <CarouselOverlay />
-      <Carousel.Caption>
+        <Carousel.Caption>
         <Title>Bem-vindo à <strong className="-destaque">Eletrosil!</strong></Title>
         <SubTitle>Mais de <strong className="-destaque">50 anos</strong> de tradição em qualidade</SubTitle>
         <Text className="d-block">
           Soluções em equipamentos eletromecânicos e painéis elétricos de baixa tensão e especializada no fornecimento de soluções sob encomenda para empresas e consultores dos setores de siderurgia, mineração, papel e celulose, ferrovias e engenharia.
         </Text>
         <Btn />
-      </Carousel.Caption>
+      </Carousel.Caption>}
     </Carousel.Item>
+
     <Carousel.Item className="slide2">
       <CarouselOverlay />
       <Carousel.Caption>
@@ -168,8 +172,9 @@ export default ({ data }) => (
           Chave de emergência ideal para trabalhar em transportadores de correia de alta densidade em ambientes com grande concentração de pós e também em atmosfera marinha ou corrosiva.
         </Text>
         <Btn className="slide2"/>
-      </Carousel.Caption>
+      </Carousel.Caption>}
     </Carousel.Item>
+
     <Carousel.Item className="slide3">
       <CarouselOverlay />
       <Carousel.Caption>
@@ -183,5 +188,6 @@ export default ({ data }) => (
         <Btn />
       </Carousel.Caption>
     </Carousel.Item>
+    
   </HomeCarousel>
 );

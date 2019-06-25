@@ -23,6 +23,11 @@ const NBNavbar = styled(Navbar)`
   .navbar-toggler {
     border: none;
   }
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      border-top: 1px solid ${props => props.theme.color.tertiaryMedium};
+    }
+  }
 `;
 
 const NBLogo = styled(Link)`
@@ -45,8 +50,6 @@ const NBLink = styled(NavLink)`
 `;
 
 const NBDrop = styled(NavDropdown)`
-  display: flex;
-  align-items: center;
   margin: 10px 20px;
   &.nav-item > .nav-link {
     color: ${props => props.theme.color.tertiaryMedium};
