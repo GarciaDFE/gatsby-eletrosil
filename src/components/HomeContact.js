@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
-import imgMapa from "../images/imgHomeMapa.jpg";
-import iconLocal from "../images/iconMapMarkerPositivo.svg";
-import iconPhone from "../images/iconPhonePositivo.svg";
-import iconEmail from "../images/iconEnvelopePositivo.svg";
-import iconWhats from "../images/iconWhatsappPositivo.svg";
+import imgMapa from "../images/contato/imgHomeMapa.jpg";
+import iconLocal from "../images/contato/iconMapMarkerPositivo.svg";
+import iconPhone from "../images/contato/iconPhonePositivo.svg";
+import iconEmail from "../images/contato/iconEnvelopePositivo.svg";
+import iconWhats from "../images/contato/iconWhatsappPositivo.svg";
 
 const HomeContact = styled(Row)`
   width: 100%;

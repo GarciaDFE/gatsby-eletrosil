@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const TitleSection = styled.div`
+const WrapTitlePage = styled.div`
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto 30px;
+  @media (min-width: 768px) {
+    margin: 0 auto 50px;
+  }
 `;
 
-const Title = styled.h2`
+const Title = styled.h1`
   font-family: ${props => props.theme.font.primary};
   font-size: 1.6em;
   font-weight: bold;
@@ -25,29 +27,6 @@ const Title = styled.h2`
     background: ${props => props.theme.color.secondyDark};
     margin: 10px auto;
   }
-  &.-smallCenter {
-    font-size: 1.2em;
-    &::after {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 4px;
-      background: ${props => props.theme.color.secondyDark};
-      margin: 10px auto;
-    }
-  }
-  &.-smallLeft {
-    font-size: 1.2em;
-    text-align: left;
-    &::after {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 4px;
-      background: ${props => props.theme.color.secondyDark};
-      margin: 10px 0;
-    }
-  }
   &.-inverse {
     color: ${props => props.theme.color.tertiaryLight};
     &::after {
@@ -60,7 +39,6 @@ const Title = styled.h2`
     }
   }
 `;
-
 
 const Subtitle = styled.h4`
   font-family: ${props => props.theme.font.primary};
@@ -79,16 +57,9 @@ const Subtitle = styled.h4`
   }
 `;
 
-// export default ({ title, subtitle, variationClass, props }) => (
-//   <TitleSection {...props}>
-//     <Subtitle className={variationClass} {...props} >{subtitle}</Subtitle>
-//     <Title className={variationClass} {...props} >{title}</Title>
-//   </TitleSection>
-// );
-
-export default ({subtitle, title, props}) => (
-  <TitleSection>
-    <Subtitle {...props} >{subtitle}</Subtitle>
-    <Title {...props} >{title}</Title>
-  </TitleSection>
+export default ({ title, subtitle, inverseClass }) => (
+  <WrapTitlePage>
+    <Subtitle className={inverseClass}>{subtitle}</Subtitle>
+    <Title className={inverseClass}>{title}</Title>
+  </WrapTitlePage>
 );

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
-import imgEmpresa from "../images/imgHomeEmpresa.jpg";
+import imgEmpresa from "../images/empresa/imgHomeEmpresa.jpg";
 import BtnSaibaMais from "./BtnSaibaMais";
 
 const HomeCompany = styled(Row)`

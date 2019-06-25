@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "gatsby";
 import logoNav from "../../images/header/logo.jpg";
-import NavLink from "react-bootstrap/NavLink";
+// import NavLink from "react-bootstrap/NavLink";
 
 const NBContainer = styled(Container)`
   background-color: ${props => props.theme.color.tertiaryLight};
@@ -38,7 +38,7 @@ const NBLogo = styled(Link)`
   }
 `;
 
-const NBLink = styled(NavLink)`
+const NBLink = styled(Link)`
   display: flex;
   align-items: center;
   color: ${props => props.theme.color.tertiaryMedium};
@@ -78,8 +78,8 @@ export default ({ data }) => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <NBLink href="index.js">Início</NBLink>
-          <NBLink href="#empresa">Empresa</NBLink>
+          <NBLink to="/">Início</NBLink>
+          <NBLink to="/empresa">Empresa</NBLink>
           <NBDrop title="Produtos e Serviços" id="basic-nav-dropdown">
             <NavDropdown.Item href="#produtos">
               Nossos Produtos
@@ -89,8 +89,8 @@ export default ({ data }) => (
               Nossos Serviços
             </NavDropdown.Item>
           </NBDrop>
-          <NBLink href="#representantes">Representantes</NBLink>
-          <NBLink href="#contatos">Contatos</NBLink>
+          <NBLink to="#">Representantes</NBLink>
+          <NBLink to="#">Contatos</NBLink>
         </Nav>
       </Navbar.Collapse>
     </NBNavbar>

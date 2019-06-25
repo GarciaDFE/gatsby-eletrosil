@@ -6,7 +6,10 @@ const theme = {
     secondyDark: "#f57c00", // dark orange
     tertiaryLight: "#fff", // white
     tertiaryMedium: "#757575", // gray
-    tertiaryDark: "#000" // black
+    tertiaryDark: "#000", // black
+    bgcGray: "#F2F2F2", // background cinza claro
+    bgcBlue: "#E4F3FA", // background azul claro
+    
   },
   font: {
     primary: `

@@ -111,6 +111,7 @@ const HomeCarousel = styled(Carousel)`
       }
     }
   }
+
   .carousel-control-prev,
   .carousel-control-next {
     width: 10%;

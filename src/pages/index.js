@@ -35,18 +35,23 @@ const ContactContainer = styled(Container)`
   }
 `;
 
+const Titles = styled(TitleSection)`
+  background-color: violet;
+  margin-bottom: 50px;
+` 
+
 const IndexPage = () => (
   <Layout>
     <CarouselContainer fluid>
       <HomeCarousel />
     </CarouselContainer>
     <CompanyContainer fluid>
-      <TitleSection subtitle={"Um Pouco"} title={"Sobre Nossa Empresa"} />
+      <Titles subtitle={"Um Pouco"} title={"Sobre Nossa Empresa"} />
       <HomeCompany />
     </CompanyContainer>
     <ProdServContainer fluid>
       <TitleSection
-        inverseClass={"-inverse"}
+        variationClass={"-inverse"}
         subtitle={"Nossa Linha de"}
         title={"Produtos e Serviços"}
       />
