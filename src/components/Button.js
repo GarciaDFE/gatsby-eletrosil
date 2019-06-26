@@ -7,22 +7,21 @@ const BtnSaibaMais = styled(Link)`
   margin: 0 auto;
   background-color: ${props => props.theme.color.secondyDark};
   color: ${props => props.theme.color.tertiaryLight};
-  width: 100px;
-  height: 30px;
-  padding: 0 5px;
+  height: 40px;
+  padding: 0 20px;
   border-radius: 5px;
   border: none;
   text-transform: uppercase;
   font-family: ${props => props.theme.font.secondy};
-  font-size: 12px;
+  font-size: 0.9em;
   text-align: center;
   font-weight: bold;
-  line-height: 30px;
-  letter-spacing: 0.05em;
+  line-height: 40px;
   text-decoration: none;
   cursor: pointer;
   transition: all 300ms linear;
   opacity: 0.9;
+  box-shadow: 0 0 10px ${props => props.theme.color.tertiaryMedium};
   &:hover {
     transition: all 300ms linear;
     text-decoration: inherit;
@@ -34,4 +33,4 @@ const BtnSaibaMais = styled(Link)`
   }
 `;
 
-export default props => <BtnSaibaMais {...props}>Saiba Mais</BtnSaibaMais>;
+export default props => <BtnSaibaMais {...props}></BtnSaibaMais>;

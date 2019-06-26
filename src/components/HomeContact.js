@@ -1,13 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
+
 import imgMapa from "../images/contato/imgHomeMapa.jpg";
 import iconLocal from "../images/contato/iconMapMarkerPositivo.svg";
 import iconPhone from "../images/contato/iconPhonePositivo.svg";
 import iconEmail from "../images/contato/iconEnvelopePositivo.svg";
 import iconWhats from "../images/contato/iconWhatsappPositivo.svg";
+import TitleSection from "../components/TitleSection";
 
 const HomeContact = styled(Row)`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+const Title = styled(TitleSection)`
+  &:last-child {
+    margin-bottom: 40px;
+  }
+`
+
+const WrapContact = styled(Row)`
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -106,6 +120,7 @@ const ItemSetor = styled.li`
   font-size: 1em;
   padding-left: 25px;
 `;
+
 const ItemEmail = styled.li`
   &:before {
     content: "";
@@ -128,39 +143,42 @@ const ItemWhats = styled.li`
 
 export default () => (
   <HomeContact>
-    <Contacts xs={12} md={6}>
-      <ListContacts>
-        <Name>Eletrosil Indústria Metalúrgica</Name>
-        <Local>
-          Rua Tenente Chantré, nº 337 – Vila Invernada
-          <br />
-          São Paulo-SP — CEP 03351-080
-        </Local>
-        <Phone>+55 (11) 2671-7088 — (11) 2671-2557</Phone>
-      </ListContacts>
-      <ListContacts>
-        <ItemSetor>Setor Comercial:</ItemSetor>
-        <ItemEmail>vendas@eletrosil.com.br</ItemEmail>
-        <ItemWhats>+55 (11) 99999-9999</ItemWhats>
-      </ListContacts>
-      <ListContacts>
-        <ItemSetor>Setor Técnico:</ItemSetor>
-        <ItemEmail>depto.tecnico@eletrosil.com.br</ItemEmail>
-        <ItemWhats>+55 (11) 99999-9999</ItemWhats>
-      </ListContacts>
-      <ListContacts>
-        <ItemSetor>Setor Financeiro:</ItemSetor>
-        <ItemEmail>financeiro@eletrosil.com.br</ItemEmail>
-        <ItemWhats>+55 (11) 99999-9999</ItemWhats>
-      </ListContacts>
-      <ListContacts>
-        <ItemSetor>Setor de Recursos Humanos:</ItemSetor>
-        <ItemEmail>rh@eletrosil.com.br</ItemEmail>
-        <ItemWhats>+55 (11) 99999-9999</ItemWhats>
-      </ListContacts>
-    </Contacts>
-    <Img xs={12} md={6}>
-      <img src={imgMapa} alt="Imagem do mapa de localizção da Eletrosil" />
-    </Img>
+    <Title subtitle={"Como você pode"} title={"Falar Conosco"} />
+    <WrapContact>
+      <Contacts xs={12} md={6}>
+        <ListContacts>
+          <Name>Eletrosil Indústria Metalúrgica</Name>
+          <Local>
+            Rua Tenente Chantré, nº 337 – Vila Invernada
+            <br />
+            São Paulo-SP — CEP 03351-080
+          </Local>
+          <Phone>+55 (11) 2671-7088 — (11) 2671-2557</Phone>
+        </ListContacts>
+        <ListContacts>
+          <ItemSetor>Setor Comercial:</ItemSetor>
+          <ItemEmail>vendas@eletrosil.com.br</ItemEmail>
+          <ItemWhats>+55 (11) 99999-9999</ItemWhats>
+        </ListContacts>
+        <ListContacts>
+          <ItemSetor>Setor Técnico:</ItemSetor>
+          <ItemEmail>depto.tecnico@eletrosil.com.br</ItemEmail>
+          <ItemWhats>+55 (11) 99999-9999</ItemWhats>
+        </ListContacts>
+        <ListContacts>
+          <ItemSetor>Setor Financeiro:</ItemSetor>
+          <ItemEmail>financeiro@eletrosil.com.br</ItemEmail>
+          <ItemWhats>+55 (11) 99999-9999</ItemWhats>
+        </ListContacts>
+        <ListContacts>
+          <ItemSetor>Setor de Recursos Humanos:</ItemSetor>
+          <ItemEmail>rh@eletrosil.com.br</ItemEmail>
+          <ItemWhats>+55 (11) 99999-9999</ItemWhats>
+        </ListContacts>
+      </Contacts>
+      <Img xs={12} md={6}>
+        <img src={imgMapa} alt="Imagem do mapa de localizção da Eletrosil" />
+      </Img>
+    </WrapContact>
   </HomeContact>
 );

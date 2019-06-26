@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Col } from "react-bootstrap"
 
-const TitleSection = styled.div`
+const TitleSection = styled(Col)`
   width: 100%;
+  display: block;
   margin: 0;
   padding: 0;
 `;
@@ -79,9 +81,9 @@ const Subtitle = styled.h4`
   }
 `;
 
-export default ({ title, subtitle, variationClass, props }) => (
-  <TitleSection {...props}>
-    <Subtitle className={variationClass} {...props} >{subtitle}</Subtitle>
-    <Title className={variationClass} {...props} >{title}</Title>
+export default props => (
+  <TitleSection>
+    <Subtitle {...props} >{props.subtitle}</Subtitle>
+    <Title {...props} >{props.title}</Title>
   </TitleSection>
 );

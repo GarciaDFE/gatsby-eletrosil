@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
-import BtnSaibaMais from "./BtnSaibaMais";
 
+import Button from "./Button";
 
 const CardCol = styled(Col)`
   margin: 0;
@@ -19,8 +19,11 @@ const Card = styled.dl`
   margin: 10px auto;
   padding: 20px 15px;
   @media (min-width: 768px) {
-    width: 200px;
     height: 330px;
+  }
+  @media (min-width: 992px) {
+    width: 190px;
+    height: 350px;
   }
 `;
 
@@ -50,12 +53,16 @@ const Description = styled.dd`
   margin: 0 0 20px 0;
 `;
 
-const BtnCard = styled(BtnSaibaMais)`
+const BtnCard = styled(Button)`
+  box-shadow: 0 0 10px ${props => props.theme.color.tertiaryDark};
   @media (min-width: 768px) {
     position: absolute;
-    left: 50%;
     transform: translateX(-50%);
     bottom: 30px;
+  }
+  @media (min-width: 992px) {
+    padding: 0;
+    width: 60%;
   }
 `;
 
@@ -67,7 +74,7 @@ export default ({ icon, title, description, altText }) => (
       </Icon>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <BtnCard />
+      <BtnCard>Saiba mais</BtnCard>
     </Card>
   </CardCol>
 );

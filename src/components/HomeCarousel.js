@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Carousel } from "react-bootstrap";
+
 import img1 from "../images/carousel/img1Carousel.jpg";
 import img2 from "../images/carousel/img2Carousel.jpg";
 import img3 from "../images/carousel/img3Carousel.jpg";
-import BtnSaibaMais from "./BtnSaibaMais"
+import Button from "./Button"
 
 const CarouselOverlay = styled.div`
   position: absolute;
@@ -84,7 +85,8 @@ const Text = styled.p`
   }
 `;
 
-const Btn = styled(BtnSaibaMais)`
+const Btn = styled(Button)`
+  box-shadow: 0 0 10px ${props => props.theme.color.tertiaryLight};
   @media (min-width: 768px) {
     &.slide2 {
       float: left;
@@ -158,7 +160,7 @@ export default ({ data }) => (
         <Text className="d-block">
           Soluções em equipamentos eletromecânicos e painéis elétricos de baixa tensão e especializada no fornecimento de soluções sob encomenda para empresas e consultores dos setores de siderurgia, mineração, papel e celulose, ferrovias e engenharia.
         </Text>
-        <Btn />
+        <Btn>Saiba mais</Btn>
       </Carousel.Caption>}
     </Carousel.Item>
 
@@ -172,7 +174,7 @@ export default ({ data }) => (
         <Text className="d-block slide2">
           Chave de emergência ideal para trabalhar em transportadores de correia de alta densidade em ambientes com grande concentração de pós e também em atmosfera marinha ou corrosiva.
         </Text>
-        <Btn className="slide2"/>
+        <Btn className="slide2">Saiba mais</Btn>
       </Carousel.Caption>}
     </Carousel.Item>
 
@@ -186,7 +188,7 @@ export default ({ data }) => (
           Em parceria com empresas multinacionais de tecnologias consagradas
           fornecemos soluções completas em sistemas de automação e controle de movimentação de cargas.
         </Text>
-        <Btn />
+        <Btn>Saiba mais</Btn>
       </Carousel.Caption>
     </Carousel.Item>
     

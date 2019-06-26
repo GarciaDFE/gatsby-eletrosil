@@ -4,8 +4,9 @@ import { Container } from "react-bootstrap";
 
 import Layout from "../components/Layout";
 import TitlePage from "../components/TitlePage";
-import TitleSection from "../components/TitleSection";
 import EmpresaHistoria from "../components/EmpresaHistoria";
+import EmpresaSede from "../components/EmpresaSede";
+import EmpresaPolQuality from "../components/EmpresaPolQuality";
 
 const CompanyContainer = styled(Container)`
   background-color: ${props => props.theme.color.bgcGray};
@@ -31,17 +32,23 @@ const PolQualityContainer = styled(Container)`
   }
 `;
 
+const Title = styled(TitlePage)`
+  &:last-child {
+    margin-bottom: 60px;
+  }
+`
+
 const Empresa = () => (
   <Layout>
     <CompanyContainer fluid>
-      <TitlePage title={"Empresa"} />
+      <Title title={"Empresa"} />
       <EmpresaHistoria />
     </CompanyContainer>
     <SedeContainer fluid>
-      <TitleSection variationClass={"-smallCenter"} title={"Estrutura da nossa sede"} />
+      <EmpresaSede />
     </SedeContainer>
     <PolQualityContainer fluid>
-      <TitleSection variationClass={"-smallCenter"} title={"Política de Qualidade"} />
+      <EmpresaPolQuality />
     </PolQualityContainer>
   </Layout>
 );

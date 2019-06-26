@@ -4,7 +4,6 @@ import { Container } from "react-bootstrap";
 
 import Layout from "../components/Layout";
 import HomeCarousel from "../components/HomeCarousel";
-import TitleSection from "../components/TitleSection";
 import HomeCompany from "../components/HomeCompany";
 import HomeProdServ from "../components/HomeProdServ";
 import HomeContact from "../components/HomeContact";
@@ -35,30 +34,18 @@ const ContactContainer = styled(Container)`
   }
 `;
 
-const Titles = styled(TitleSection)`
-  background-color: violet;
-  margin-bottom: 50px;
-` 
-
 const IndexPage = () => (
   <Layout>
     <CarouselContainer fluid>
       <HomeCarousel />
     </CarouselContainer>
     <CompanyContainer fluid>
-      <Titles subtitle={"Um Pouco"} title={"Sobre Nossa Empresa"} />
       <HomeCompany />
     </CompanyContainer>
     <ProdServContainer fluid>
-      <TitleSection
-        variationClass={"-inverse"}
-        subtitle={"Nossa Linha de"}
-        title={"Produtos e Serviços"}
-      />
       <HomeProdServ />
     </ProdServContainer>
     <ContactContainer fluid>
-      <TitleSection subtitle={"Como você pode"} title={"Falar Conosco"} />
       <HomeContact />
     </ContactContainer>
   </Layout>

@@ -2,13 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import imgEmpresa from "../images/empresa/imgHomeEmpresa.jpg";
-import BtnSaibaMais from "./BtnSaibaMais";
+import Button from "./Button";
+import TitleSection from "../components/TitleSection";
 
 const HomeCompany = styled(Row)`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 `;
+
+const Title = styled(TitleSection)`
+  &:last-child {
+    margin-bottom: 30px;
+  }
+`
+
+const WrapHistory = styled(Row)`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+`
 
 const Img = styled(Col)`
   display: none;
@@ -36,7 +49,6 @@ const Paragraph = styled.p`
   font-family: ${props => props.theme.font.primary};
   color: ${props => props.theme.color.tertiaryMedium};
   font-size: 0.8em;
-  margin-bottom: 1em;
   @media (min-width: 768px) {
     width: 90%;
     font-size: 0.9em;
@@ -47,27 +59,30 @@ const Paragraph = styled.p`
 
 export default () => (
   <HomeCompany>
-    <Img>
-      <img src={imgEmpresa} alt="Imagem das instalações internas da empresa" />
-    </Img>
-    <History>
-      <Paragraph>
-        A Eletrosil Indústria Metalúrgica Ltda. é uma empresa dedicada à
-        fabricação, manutenção, reparo e recuperação de equipamentos
-        eletromecânicos e painéis elétricos de baixa tensão em geral.
-      </Paragraph>
-      <Paragraph>
-        Especializada no fornecimento de soluções sob encomenda, possui mais de
-        45 anos de tradição na execução de serviços com elevado nível de
-        qualidade, precisão e em prazos que atendam as necessidades dos
-        clientes.
-      </Paragraph>
-      <Paragraph>
-        Em parceria com empresas multinacionais de tecnologias consagradas
-        fornece soluções completas em sistemas de automação e controle de
-        movimentação de cargas (pontes rolantes).
-      </Paragraph>
-      <BtnSaibaMais />
-    </History>
+    <Title className="-variation" subtitle={"Um Pouco"} title={"Sobre Nossa Empresa"} />
+    <WrapHistory>
+      <Img>
+        <img src={imgEmpresa} alt="Imagem das instalações internas da empresa" />
+      </Img>
+      <History>
+        <Paragraph>
+          A Eletrosil Indústria Metalúrgica Ltda. é uma empresa dedicada à
+          fabricação, manutenção, reparo e recuperação de equipamentos
+          eletromecânicos e painéis elétricos de baixa tensão em geral.
+        </Paragraph>
+        <Paragraph>
+          Especializada no fornecimento de soluções sob encomenda, possui mais de
+          45 anos de tradição na execução de serviços com elevado nível de
+          qualidade, precisão e em prazos que atendam as necessidades dos
+          clientes.
+        </Paragraph>
+        <Paragraph>
+          Em parceria com empresas multinacionais de tecnologias consagradas
+          fornece soluções completas em sistemas de automação e controle de
+          movimentação de cargas (pontes rolantes).
+        </Paragraph>
+        <Button>Saiba mais</Button>
+      </History>
+    </WrapHistory>
   </HomeCompany>
 );

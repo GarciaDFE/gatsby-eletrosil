@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const WrapTitlePage = styled.div`
+const TitlePage = styled.div`
   width: 100%;
   margin: 0 auto 30px;
   @media (min-width: 768px) {
@@ -57,9 +57,9 @@ const Subtitle = styled.h4`
   }
 `;
 
-export default ({ title, subtitle, inverseClass }) => (
-  <WrapTitlePage>
-    <Subtitle className={inverseClass}>{subtitle}</Subtitle>
-    <Title className={inverseClass}>{title}</Title>
-  </WrapTitlePage>
+export default props => (
+  <TitlePage>
+    <Subtitle {...props}>{props.subtitle}</Subtitle>
+    <Title {...props}>{props.title}</Title>
+  </TitlePage>
 );
