@@ -79,16 +79,9 @@ const Subtitle = styled.h4`
   }
 `;
 
-// export default ({ title, subtitle, variationClass, props }) => (
-//   <TitleSection {...props}>
-//     <Subtitle className={variationClass} {...props} >{subtitle}</Subtitle>
-//     <Title className={variationClass} {...props} >{title}</Title>
-//   </TitleSection>
-// );
-
-export default ({subtitle, title, props}) => (
-  <TitleSection>
-    <Subtitle {...props} >{subtitle}</Subtitle>
-    <Title {...props} >{title}</Title>
+export default ({ title, subtitle, variationClass, props }) => (
+  <TitleSection {...props}>
+    <Subtitle className={variationClass} {...props} >{subtitle}</Subtitle>
+    <Title className={variationClass} {...props} >{title}</Title>
   </TitleSection>
 );

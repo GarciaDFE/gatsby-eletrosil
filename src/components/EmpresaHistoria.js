@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import imgHistory from "../images/empresa/imgBreveHistoria.jpg";
-import TitleSection from "./TitleSection"
 
 const CompanyHistory = styled(Row)`
   width: 100%;
@@ -26,15 +25,33 @@ const Img = styled(Col)`
 `;
 
 const History = styled(Col)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: ${props => props.theme.color.tertiaryLight};
-  margin: 40px 25px;
+  margin: 0 20px;
   padding: 30px;
+  @media (min-width: 768px) {
+    margin: 40px 25px;
+    padding: 30px;
+  }
 `;
 
-const TTHistory = styled(TitleSection)`
-    color: blue;
-    background-color: yellow;
-    margin-bottom: 0;
+const Title = styled.h3`
+  font-family: ${props => props.theme.font.primary};
+  font-size: 1.2em;
+  font-weight: bold;
+  color: ${props => props.theme.color.tertiaryMedium};
+  text-align: left;
+  margin-bottom: 20px;
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: ${props => props.theme.color.secondyDark};
+    margin: 10px 0;
+  }
 `
 
 const Paragraph = styled.p`
@@ -55,7 +72,7 @@ export default props => (
       <img src={imgHistory} alt="Imagem da fachada da empresa" />
     </Img>
     <History>
-      <TTHistory title={"Breve história"} />
+      <Title>Breve história</Title>
       <Paragraph>
         A Eletrosil, fundada no ano de 1966, iniciou suas atividades nacionalizando contatos elétricos, isoladores, chaves elétricas e peças eletromecânicas em geral, tornando-se um dos lideres de mercado neste segmento.
       </Paragraph>
