@@ -8,7 +8,7 @@ import icon2 from "../images/produtos-servicos/imgProdServ2.png";
 import icon3 from "../images/produtos-servicos/imgProdServ3.jpg";
 import icon4 from "../images/produtos-servicos/imgProdServ4.png";
 import icon5 from "../images/produtos-servicos/imgProdServ5.png";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../objects/TitleSection";
 
 const HomeProdServ = styled(Row)`
   width: 100%;

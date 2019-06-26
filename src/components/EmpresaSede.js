@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Carousel } from "react-bootstrap";
 
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../objects/TitleSection";
 import img1 from "../images/empresa/imgEstrutura-almoxarifado.jpg";
 import img2 from "../images/empresa/imgEstrutura-escritorio.jpg";
 import img3 from "../images/empresa/imgEstrutura-montagem.jpg";

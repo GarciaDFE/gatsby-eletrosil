@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import imgEmpresa from "../images/empresa/imgHomeEmpresa.jpg";
-import Button from "./Button";
-import TitleSection from "../components/TitleSection";
+import Button from "../objects/Button";
+import TitleSection from "../objects/TitleSection";
 
 const HomeCompany = styled(Row)`
   width: 100%;

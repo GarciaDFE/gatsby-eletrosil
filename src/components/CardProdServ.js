@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
 
-import Button from "./Button";
+import Button from "../objects/Button";
 
 const CardCol = styled(Col)`
   margin: 0;

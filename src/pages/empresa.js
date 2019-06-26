@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
 import Layout from "../components/Layout";
-import TitlePage from "../components/TitlePage";
+import TitlePage from "../objects/TitlePage";
 import EmpresaHistoria from "../components/EmpresaHistoria";
 import EmpresaSede from "../components/EmpresaSede";
 import EmpresaPolQuality from "../components/EmpresaPolQuality";

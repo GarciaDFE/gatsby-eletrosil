@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Row } from "react-bootstrap";
 
-import TitleSection from "../components/TitleSection";
-import Button from "./Button";
+import TitleSection from "../objects/TitleSection";
+import Button from "../objects/Button";
 
 const CompanyPolQuality = styled(Row)`
   width: 100%;

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "gatsby";
 import logoNav from "../../images/header/logo.jpg";
-// import NavLink from "react-bootstrap/NavLink";
 
 const NBContainer = styled(Container)`
   background-color: ${props => props.theme.color.tertiaryLight};
@@ -89,8 +88,8 @@ export default ({ data }) => (
               Nossos Serviços
             </NavDropdown.Item>
           </NBDrop>
-          <NBLink to="#">Representantes</NBLink>
-          <NBLink to="#">Contatos</NBLink>
+          <NBLink to="/representantes">Representantes</NBLink>
+          <NBLink to="/contatos">Contatos</NBLink>
         </Nav>
       </Navbar.Collapse>
     </NBNavbar>

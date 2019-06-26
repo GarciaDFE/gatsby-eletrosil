@@ -7,7 +7,7 @@ import iconLocal from "../images/contato/iconMapMarkerPositivo.svg";
 import iconPhone from "../images/contato/iconPhonePositivo.svg";
 import iconEmail from "../images/contato/iconEnvelopePositivo.svg";
 import iconWhats from "../images/contato/iconWhatsappPositivo.svg";
-import TitleSection from "../components/TitleSection";
+import TitleSection from "../objects/TitleSection";
 
 const HomeContact = styled(Row)`
   width: 100%;

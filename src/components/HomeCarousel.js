@@ -5,7 +5,7 @@ import { Carousel } from "react-bootstrap";
 import img1 from "../images/carousel/img1Carousel.jpg";
 import img2 from "../images/carousel/img2Carousel.jpg";
 import img3 from "../images/carousel/img3Carousel.jpg";
-import Button from "./Button"
+import Button from "../objects/Button"
 
 const CarouselOverlay = styled.div`
   position: absolute;
