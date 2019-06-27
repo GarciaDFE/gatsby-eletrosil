@@ -10,13 +10,13 @@ const RepresContainer = styled(Container)`
   background-color: ${props => props.theme.color.bgcGray};
   padding: 30px 0;
   @media (min-width: 768px) {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
 `;
 
 const Title = styled(TitlePage)`
   &:last-child {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 `
 
