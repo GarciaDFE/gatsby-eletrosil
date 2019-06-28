@@ -34,6 +34,7 @@ const Region = styled(Col)`
      justify-content: center;
      text-transform: uppercase;
      text-align: center;
+     color: ${props => props.theme.color.tertiaryMedium};
      margin-bottom: 20px;
      @media (min-width: 768px) {
           text-align: left;
@@ -103,7 +104,7 @@ export default props => (
                     <Title>São Paulo</Title>
                </Region>
                <Representantes>
-                    <RepAccordion defaultActiveKey="0">
+                    <RepAccordion>
                          <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
                                    Região da Baixada Santista
@@ -156,7 +157,7 @@ export default props => (
                     <Title>Rio de Janeiro</Title>
                </Region>
                <Representantes>
-                    <RepAccordion defaultActiveKey="0">
+                    <RepAccordion>
                          <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
                                    Região do Médio Vale do Paraíba - <span className="-variation">Volta Redonda - Barra Mansa - Resende</span>
@@ -252,7 +253,7 @@ export default props => (
                     <Title>Minas Gerais</Title>
                </Region>
                <Representantes>
-                    <RepAccordion defaultActiveKey="0">
+                    <RepAccordion>
                          <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
                                    Todas as Regiões
@@ -294,7 +295,7 @@ export default props => (
                     <Title>Paraná</Title>
                </Region>
                <Representantes>
-                    <RepAccordion defaultActiveKey="0">
+                    <RepAccordion>
                          <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
                                    Todas as Regiões
@@ -323,7 +324,7 @@ export default props => (
                     <Title>Santa Catarina e Rio Grande do Sul</Title>
                </Region>
                <Representantes>
-                    <RepAccordion defaultActiveKey="0">
+                    <RepAccordion>
                          <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
                                    Todas as Regiões
@@ -353,7 +354,7 @@ export default props => (
                     <Subtitle>não listados acima</Subtitle>
                </Region>
                <Representantes>
-                    <RepAccordion defaultActiveKey="0">
+                    <RepAccordion>
                          <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
                                    Todas as Regiões

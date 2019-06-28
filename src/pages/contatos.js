@@ -6,12 +6,13 @@ import Layout from "../components/Layout";
 import TitlePage from "../objects/TitlePage";
 import ContatosContact from "../components/ContatosContact"
 import ContatosForm from "../components/ContatosForm"
+import ContatosLocal from "../components/ContatosLocal"
 
 const ContactContainer = styled(Container)`
   background-color: ${props => props.theme.color.bgcGray};
-  padding: 30px 0;
+  padding: 30px 0 0;
   @media (min-width: 768px) {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
 `;
 
@@ -34,6 +35,13 @@ const WrapFormContact = styled(Row)`
   }
 `;
 
+const WrapLocalContact = styled(Row)`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+`;
+
 const Contatos = () => (
   <Layout>
     <ContactContainer fluid>
@@ -42,6 +50,9 @@ const Contatos = () => (
         <ContatosForm xs={12} md={6} />
         <ContatosContact xs={12} md={6} />
       </WrapFormContact>
+      <WrapLocalContact fluid>
+        <ContatosLocal />
+      </WrapLocalContact>
     </ContactContainer>
   </Layout>
 );
