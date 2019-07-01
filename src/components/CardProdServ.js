@@ -66,7 +66,7 @@ const BtnCard = styled(Button)`
   }
 `;
 
-export default ({ icon, title, description, altText }) => (
+export default ({ icon, altText, title, description, label }) => (
   <CardCol sm={6} md={4} lg={2}>
     <Card>
       <Icon>
@@ -74,7 +74,7 @@ export default ({ icon, title, description, altText }) => (
       </Icon>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <BtnCard>Saiba mais</BtnCard>
+      <BtnCard>{label}</BtnCard>
     </Card>
   </CardCol>
 );

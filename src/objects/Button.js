@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const BtnSaibaMais = styled(Link)`
+const Button = styled(Link)`
   display: inline-block;
   margin: 0 auto;
   background-color: ${props => props.theme.color.secondyDark};
@@ -33,4 +33,4 @@ const BtnSaibaMais = styled(Link)`
   }
 `;
 
-export default props => <BtnSaibaMais {...props}></BtnSaibaMais>;
+export default props => <Button {...props}></Button>;

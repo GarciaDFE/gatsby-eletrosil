@@ -48,19 +48,23 @@ const NBLink = styled(Link)`
   }
 `;
 
+const NBDLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  color: ${props => props.theme.color.tertiaryMedium};
+  &:hover {
+    text-decoration: none;
+    color: ${props => props.theme.color.secondyDark};
+  }
+`;
+
 const NBDrop = styled(NavDropdown)`
   margin: 10px 20px;
   &.nav-item > .nav-link {
     color: ${props => props.theme.color.tertiaryMedium};
     &:hover {
-      color: ${props => props.theme.color.secondyDark};
-    }
-  }
-  > .dropdown-menu > .dropdown-item {
-    font-size: 0.8em;
-    color: ${props => props.theme.color.tertiaryMedium};
-    &:hover {
-      background-color: transparent;
       color: ${props => props.theme.color.secondyDark};
     }
   }
@@ -80,13 +84,13 @@ export default ({ data }) => (
           <NBLink to="/">Início</NBLink>
           <NBLink to="/empresa">Empresa</NBLink>
           <NBDrop title="Produtos e Serviços" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#produtos">
+            <NBDLink to="/produtos">
               Nossos Produtos
-            </NavDropdown.Item>
+            </NBDLink>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#servicos">
+            <NBDLink to="/servicos">
               Nossos Serviços
-            </NavDropdown.Item>
+            </NBDLink>
           </NBDrop>
           <NBLink to="/representantes">Representantes</NBLink>
           <NBLink to="/contatos">Contatos</NBLink>
